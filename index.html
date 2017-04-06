@@ -1,0 +1,14 @@
+---
+bg: "mainimg.jpg"
+layout: default
+crawlertitle: "Quus blog"
+title: "경력단절 개발자 로그"
+summary: "개발자였으나 설계자, 관리자 그리고 컨설턴트 거쳐 다시 개발 위한 적응기"
+---
+
+{% for post in site.posts limit: 5 %}
+  <article class="index-page">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    {{ post.excerpt }}
+  </article>
+{% endfor %}
